@@ -79,13 +79,13 @@ function App() {
         }
       />
       <Route
-        path="/leaveview"
-        element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <LeaveView />
-          </Suspense>
-        }
-      />
+      path="/leave-view/:id"
+      element={
+        <Suspense fallback={<div>Loading...</div>}>
+          <LeaveView />
+        </Suspense>
+      }
+/>
       <Route
         path="/adminlogin"
         element={
