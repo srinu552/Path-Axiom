@@ -1,0 +1,331 @@
+.reg-root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px 60px;
+  background: linear-gradient(135deg, #e5e9ee 0%, #e8eaec 40%, #cacdcf 70%, #babec0 100%);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.reg-card {
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 48px 44px 40px;
+  box-shadow: 0 4px 24px rgba(99, 102, 241, 0.08);
+  animation: cardIn 0.4s ease both;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.reg-logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.reg-logo-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+  color: #fff;
+}
+
+.reg-title {
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e1b4b;
+  margin-bottom: 4px;
+}
+
+.reg-subtitle {
+  text-align: center;
+  font-size: 13.5px;
+  color: #6b7280;
+  margin-bottom: 32px;
+}
+
+/* Toast / inline alert */
+.reg-toast {
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13.5px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.reg-toast.success {
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  color: #15803d;
+}
+.reg-toast.error {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+}
+
+/* Section label */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+.section-label-text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6366f1;
+  white-space: nowrap;
+}
+
+.section-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(99, 102, 241, 0.2);
+}
+
+/* Grid */
+.reg-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+
+.reg-grid.single {
+  grid-template-columns: 1fr;
+}
+
+/* Field */
+.field-group {
+  margin-bottom: 18px;
+}
+
+.field-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 7px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Inputs */
+.g-input,
+.g-select {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  color: #1e1b4b;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.g-input::placeholder {
+  color: #9ca3af;
+}
+
+.g-input:focus,
+.g-select:focus {
+  border-color: #6366f1;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.g-input.has-error,
+.g-select.has-error {
+  border-color: #f87171;
+  background: #fff5f5;
+}
+
+.g-input.has-error:focus,
+.g-select.has-error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Select arrow */
+.select-wrap {
+  position: relative;
+}
+
+.select-wrap::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #6366f1;
+  pointer-events: none;
+}
+
+.g-select {
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+/* Password toggle */
+.pw-wrap {
+  position: relative;
+}
+
+.pw-wrap .g-input {
+  padding-right: 46px;
+}
+
+.pw-toggle {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.pw-toggle:hover {
+  color: #6366f1;
+}
+
+/* Field error */
+.field-error {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 5px;
+}
+
+/* Checkbox */
+.check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.g-checkbox {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  accent-color: #6366f1;
+  margin-top: 2px;
+}
+
+.check-text {
+  font-size: 13.5px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.check-link {
+  color: #6366f1;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: opacity 0.2s, box-shadow 0.2s;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.32);
+}
+
+.submit-btn:hover:not(:disabled) {
+  opacity: 0.92;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.42);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.reg-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 8px 0 20px;
+}
+
+.reg-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13.5px;
+  color: #6b7280;
+}
+
+.reg-footer .link {
+  color: #6366f1;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .reg-root { padding: 28px 16px 48px; }
+  .reg-card { padding: 36px 24px 32px; border-radius: 20px; }
+  .reg-grid { grid-template-columns: 1fr 1fr; gap: 0 14px; }
+}
+
+@media (max-width: 599px) {
+  .reg-root { padding: 20px 12px 44px; }
+  .reg-card { padding: 28px 18px 26px; border-radius: 18px; }
+  .reg-grid { grid-template-columns: 1fr; }
+  .reg-title { font-size: 21px; }
+}
+
+@media (max-width: 359px) {
+  .reg-card { padding: 22px 14px 20px; }
+  .reg-title { font-size: 19px; }
+  .g-input, .g-select { font-size: 13px; padding: 10px 11px; }
+}
