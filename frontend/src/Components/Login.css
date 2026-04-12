@@ -1,0 +1,121 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page */
+.login-root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  font-family: Arial, sans-serif;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Text */
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Error */
+.error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Form */
+.group {
+  margin-bottom: 15px;
+}
+
+.group label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.group input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+/* Password */
+.password-box {
+  display: flex;
+}
+
+.password-box input {
+  flex: 1;
+}
+
+.password-box button {
+  margin-left: 5px;
+  padding: 10px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Forgot */
+.forgot {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.forgot button {
+  background: none;
+  border: none;
+  color: #6366f1;
+  cursor: pointer;
+  font-size: 13px;
+}
